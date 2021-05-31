@@ -10,6 +10,7 @@ class ClientSettings
     public function __construct()
     {
         $this->params = [
+            'prefix' => 'client_',
             'config_path' => EVO_CORE_PATH . 'custom/clientsettings/',
             'menu' => isset($_GET['type']) && is_string($_GET['type']) ? $_GET['type'] : 'default',
         ];
