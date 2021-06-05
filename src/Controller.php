@@ -31,7 +31,7 @@ class Controller
         return view('cs::tabs', [
             'tabs'         => $structure['tabs'],
             'head'         => $head,
-            'stay'         => $request->input('stay'),
+            'stay'         => session('cs::stay', 0),
             'prefix'       => $cs->getPrefix(),
             'values'       => evo()->config,
             'richtextinit' => $cs->getRichTextConfiguration($structure),
@@ -71,8 +71,10 @@ class Controller
         $evo->clearCache('full');
 
         if ($request->input('stay') == 2) {
+            session()->put('cs::stay', 2);
             return redirect()->route('cs::show', $tab);
         } else {
+            session()->forget('cs::stay');
             return redirect(MODX_MANAGER_URL . '?a=2');
         }
     }
