@@ -101,14 +101,14 @@
                                     </div>
                                 @else
                                     {{ $options['caption'] }} <br>
-                                    <small>{{ $params['prefix'] . $field }}</small>
+                                    <small>{{ $prefix . $field }}</small>
                                 @endif
                             </td>
 
                             <td data-type="{{ $options['type'] }}">
                                 @if ($options['type'] !== 'title')
                                     <?php
-                                        $value = $values[$params['prefix'] . $field] ?? false;
+                                        $value = $values[$prefix . $field] ?? false;
 
                                         $row = [
                                             'type'         => $options['type'],

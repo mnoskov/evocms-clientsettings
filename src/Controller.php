@@ -32,6 +32,7 @@ class Controller
             'tabs'         => $structure['tabs'],
             'head'         => $head,
             'stay'         => $request->input('stay'),
+            'prefix'       => $cs->getPrefix(),
             'values'       => evo()->config,
             'richtextinit' => $cs->getRichTextConfiguration($structure),
             'picker'       => $cs->getPickerConfiguration(),

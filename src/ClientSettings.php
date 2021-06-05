@@ -24,6 +24,11 @@ class ClientSettings
         return $this->params['config_path'];
     }
 
+    public function getPrefix()
+    {
+        return $this->params['prefix'];
+    }
+
     public function loadStructure($tabName = false)
     {
         $tabs = [];
