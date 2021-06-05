@@ -72,7 +72,7 @@ class Controller
 
         if ($request->input('stay') == 2) {
             session()->put('cs::stay', 2);
-            return redirect()->route('cs::show', $tab);
+            return redirect()->route('cs::show', $tab != 'default' ? $tab : null);
         } else {
             session()->forget('cs::stay');
             return redirect(MODX_MANAGER_URL . '?a=2');
