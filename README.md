@@ -1,6 +1,6 @@
 ## Client Settings for Evolution CMS 3.x
 
-<img src="https://img.shields.io/badge/PHP-%3E=7.3-green.svg?php=7.3"> <img src="https://img.shields.io/badge/EVO-%3E=3.1.3-blue.svg">
+<img src="https://img.shields.io/badge/PHP-%3E=7.3-green.svg?php=7.3"> <img src="https://img.shields.io/badge/EVO-%3E=3.1.5-blue.svg">
 
 Модуль для создания формы пользовательских настроек. http://docs.evo.im/03_extras/clientsettings.html
 
